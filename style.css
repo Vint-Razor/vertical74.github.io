@@ -1,0 +1,142 @@
+/*
+Фаил стилей CSS для "Grid CSS Test".
+
+Шаблон адаптивного сайта с
+фиксированым боковым меню и
+кнопкой "наверх" в мобильном 
+разрешении.
+
+Vint Razor Lab. 02.2018
+
+*/
+
+
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 6% 95% 10px;
+  grid-gap: 5px;
+  grid-template-areas:
+    "h h h h h h h h h h m m"
+    ". . c c c c c c c c  m m"
+    "f f f f f f f f f f f f";
+  background: #e3e3e3;
+  text-align: center;
+  font-family: "Century Gothic";
+}
+/*================ Header ===================*/
+.header h1,  p{
+  text-align: left;
+}
+
+.header{
+  grid-area: h;
+  border: 1px solid #a1a1a1;
+  border-radius:10px;
+  padding-left: 10%;
+  background: #333;
+  color: #ddd
+}
+/*============== Menu ====================*/
+.menu{  
+  grid-area: m;
+  border: 1px solid #a1a1a1;
+  border-radius:10px;
+  background: #eee;  
+}
+.menu h1{
+  font-size: 1.5em;
+}
+.nav{
+  position:fixed;  
+}
+.btn{
+  border: 3px solid #aaa;
+  border-radius: 5px;
+  margin: 10px;
+  padding:0 10px;
+  background: #555;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+/*================== Content ====================*/
+
+.content {
+  grid-area: c;
+  border: 1px solid #a1a1a1;
+  border-radius:10px;
+  padding-left: 30px;
+  background: #fdfdfd;
+}
+
+.img-fluid{
+  max-width: 90%;
+  height: auto;
+  border: 2px solid #aaa;  
+}
+
+.img-block{
+  padding-right: 30px;
+}
+/*===================== Footer =================*/
+
+.footer{
+  grid-area: f;
+  border: 1px solid #a1a1a1;
+  border-radius:10px;
+  background: #555;
+  height: 100px;
+}
+.footer p{
+  text-align: center;
+  color: #ddd;
+}
+/*=============== TOP Button=================*/
+
+.topbutton { 
+text-align:center;
+position:fixed;
+bottom:30px;
+right:30px;
+cursor:pointer;
+color:#fff;
+display:none;
+font-size:1em;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+-khtml-border-radius: 50%;
+}
+.fa-arrow-circle-up{
+  font-size: 3em;
+  color: rgba(100,100,100,.2);
+}
+
+
+
+
+/*================= media ===============*/
+
+
+@media screen and (max-width: 640px) {
+    .container {
+      grid-template-rows: 300px 90% 50px;
+        grid-template-areas:
+            "h h h h h h h h m m m m"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+  .nav{
+    position:static;
+  }
+  .img-fluid{
+    max-width: 100%;
+  }
+  .topbutton{
+    display:block;
+  }
+}
