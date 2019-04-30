@@ -82,6 +82,10 @@ Vint Razor Lab. 02.2018
 .img-block{
   padding-right: 30px;
 }
+.content a{
+  text-decoration: none;
+  font-size: 200%;  
+}
 /*===================== Footer =================*/
 
 .footer{
