@@ -143,4 +143,7 @@ border-radius: 50%;
   .topbutton{
     display:block;
   }
+  .content a{
+  text-decoration: none;
+  font-size: 200%;
 }
