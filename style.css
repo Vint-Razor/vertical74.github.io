@@ -15,7 +15,7 @@ Vint Razor Lab. 02.2018
 .container{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 6% 95% 10px;
+  grid-template-rows: 6% 96% 10px;
   grid-gap: 5px;
   grid-template-areas:
     "h h h h h h h h h h m m"
