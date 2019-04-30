@@ -126,7 +126,7 @@ border-radius: 50%;
 /*================= media ===============*/
 
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 860px) {
     .container {
       grid-template-rows: 300px 90% 50px;
         grid-template-areas:
